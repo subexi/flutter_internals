@@ -71,6 +71,8 @@ class _KeysState extends State<Keys> {
               // for (final todo in _orderedTodos) TodoItem(todo.text, todo.priority),
               for (final todo in _orderedTodos)
                 CheckableTodoItem(
+                  // The key is used to identify the widget in the widget tree and preserve its state when the order changes.
+                  key: ValueKey(todo.text),
                   todo.text,
                   todo.priority,
                 ),
